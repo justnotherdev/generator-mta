@@ -1,4 +1,5 @@
 let nameRegex = /^[a-z0-9][a-z0-9\-]*$/i;
+let displayNameRegex = /^\S+\w{5,32}$/i;
 let namespaceRegex = /^(\w+(\.\w+)*)(\w+(\.\w+)*)*$/i;
 
 module.exports.validatePublisher = function (publisher) {
@@ -16,6 +17,18 @@ module.exports.validatePublisher = function (publisher) {
 module.exports.validateNonEmpty = function (name) {
 	if (!(name && name.length > 0)) {
 		return 'Missing module display name';
+	}
+
+	return true;
+};
+
+module.exports.validateModuleDisplayName = function (displayName) {
+	if (!displayName) {
+		return 'Missing module Display Name';
+	}
+
+	if (!displayNameRegex.test(displayName)) {
+		return 'Invalid module Display Name';
 	}
 
 	return true;

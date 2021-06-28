@@ -21,7 +21,7 @@ exports.askForModuleDisplayName = (generator, moduleConfig) => {
 			name: 'displayName',
 			message: '¿Cual es el nombre del módulo nuevo?',
 			default: moduleConfig.moduleNameFromCLI || '',
-			validate: validator.validateNonEmpty
+			validate: validator.validateModuleDisplayName
 		})
 		.then((displayNameAnswer) => {
 			moduleConfig.displayName = displayNameAnswer.displayName;
