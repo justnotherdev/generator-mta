@@ -1,0 +1,49 @@
+{
+	"name": "generator-mta",
+	"version": "1.0.0",
+	"description": "",
+	"keywords": [
+		"Fiori Launchpad",
+		"Multi-Target Application",
+		"MTA",
+		"FLP",
+		"UI5",
+		"yeoman-generator"
+	],
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"main": "./generators/app/index.js",
+	"license": "MIT",
+	"author": {
+		"name": "Diego García",
+		"url": "https://github.com/justnotherdev"
+	},
+	"engines": {
+		"node": ">=10.0.0"
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"test": "mocha",
+		"prepublish": "npm test",
+		"preversion": "npm test && npm run lint",
+		"postversion": "git push && git push --tags"
+	},
+	"dependencies": {
+		"cd": "^0.3.3",
+		"chalk": "^4.1.0",
+		"yeoman-generator": "^4.13.0",
+		"yeoman-remote": "^1.0.1",
+		"yodasay": "^1.1.9",
+		"yosay": "^2.0.2"
+	},
+	"devDependencies": {
+		"@types/mocha": "^8.2.0",
+		"@types/node": "^12.11.7",
+		"@types/yeoman-generator": "^4.11.3",
+		"eslint": "^7.19.0",
+		"mocha": "^8.2.1",
+		"yo": "^3.1.1"
+	}
+}

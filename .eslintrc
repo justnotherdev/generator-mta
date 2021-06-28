@@ -1,0 +1,9 @@
+{
+	"env": {
+		"es2017": true
+	},
+	"rules": {
+		"no-trailing-spaces": 2,
+		"array-bracket-spacing": 0
+	}
+}

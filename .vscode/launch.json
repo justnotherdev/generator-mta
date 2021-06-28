@@ -1,0 +1,23 @@
+{
+	"version": "0.1.0",
+	"configurations": [
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "yeoman ses",
+			"program": "${workspaceFolder}/node_modules/yo/lib/cli.js",
+			"args": ["ses"],
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Mocha Tests",
+			"program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+
+			"internalConsoleOptions": "openOnSessionStart"
+		}
+	]
+}

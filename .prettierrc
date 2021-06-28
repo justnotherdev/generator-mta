@@ -1,0 +1,13 @@
+{
+	"useTabs": true,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"endOfLine": "lf",
+	"bracketSpacing": false,
+	"tabWidth": 4,
+	"semi": true,
+	"arrowParens": "always",
+	"editor.formatOnSave": true,
+	"xmlWhitespaceSensitivity": "ignore",
+	"printWidth": 180
+}
