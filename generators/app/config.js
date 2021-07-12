@@ -3,8 +3,11 @@ module.exports = {
 		ui5: {
 			repo: 'https://github.com/justnotherdev/ui5-boilerplate'
 		},
+		nodejs: {
+			repo: 'https://github.com/justnotherdev/nodejs-boilerplate'
+		},
 		react: {
-			repo: 'https://www.google.com'
+			repo: 'missing url'
 		}
 	}
 };

@@ -10,9 +10,10 @@ const env = require('./env');
 const execSync = require('child_process').execSync;
 
 const ui5Module = require('./generate-ui5-module');
+const nodejsModule = require('./generate-nodejs-module');
 const reactModule = require('./generate-react-module');
 
-const moduleGenerators = [ui5Module];
+const moduleGenerators = [ui5Module, nodejsModule];
 
 module.exports = class extends Generator {
 	constructor(args, opts) {
@@ -124,7 +125,9 @@ module.exports = class extends Generator {
 
 		// @ts-ignore
 		const done = this.async();
-		remote('justnotherdev', 'ui5-boilerplate', 'template', (err, cachePath) => {
+		let repoName = `${this.moduleGenerator.aliases[0]}-boilerplate`;
+		console.log(repoName);
+		remote('justnotherdev', repoName, 'template', (err, cachePath) => {
 			if (err != null) {
 				this.log('Hubo un error al conectar con el repositorio');
 				this.log(err);
